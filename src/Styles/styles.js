@@ -4,7 +4,7 @@ export const HeadingText = styled.p`
   font-family: var(--primary-font);
   font-weight: 600;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: ${(props) => props.align};
   color: var(--black);
 `;
 
@@ -31,6 +31,9 @@ export const Green = styled.span`
 `;
 export const Blue = styled.span`
   color: var(--blue);
+`;
+export const Red = styled.span`
+  color: var(--red);
 `;
 
 export const LightestGrey = styled.span`

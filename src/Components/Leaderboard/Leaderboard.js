@@ -29,7 +29,7 @@ export default function Leaderboard() {
       <SectionRight className="section-leaderboard">
         <TopNavBar />
         <MainSection>
-          <HeadingText>Leaderboard</HeadingText>
+          <HeadingText align="left">Leaderboard</HeadingText>
           <ButtonWrapper>
             <Button>Supervisor Leaderboard</Button>
             <Button primary>Weaver Leaderboard</Button>

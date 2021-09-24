@@ -11,7 +11,9 @@ import { Green, Blue, LightestGrey } from "../../Styles/styles";
 
 export default function TableComponent() {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      component={Paper}
+      sx={{ background: "transparent", boxShadow: "0" }}>
       <Table sx={{ width: "100%" }} aria-label="simple table" size="small">
         <TableHead>
           <TableRow
