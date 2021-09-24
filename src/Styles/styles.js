@@ -66,11 +66,11 @@ export const Button = styled.button`
     props.primary
       ? css`
           color: #ffffff;
-          background: linear-gradient(95.21deg, #766bfe -1.74%, #6321db 100%);
+          background: var(--blue);
         `
       : css`
-          border: 1.5px solid #6321db;
-          color: #6321db;
+          border: 1.5px solid black;
+          color: black;
           background: transparent;
         `}
 `;
