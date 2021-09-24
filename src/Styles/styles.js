@@ -11,15 +11,26 @@ export const HeadingText = styled.p`
 export const SubHeadingText = styled.p`
   font-family: var(--primary-font);
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 `;
-
 export const SectionRight = styled.section`
   width: 80vw;
+  min-height: 100vh;
 `;
 
 export const MainSection = styled.section`
   padding: 2rem;
+`;
+
+export const Green = styled.span`
+  color: var(--green);
+`;
+export const Blue = styled.span`
+  color: var(--blue);
+`;
+
+export const LightestGrey = styled.span`
+  color: var(--grey-lightest);
 `;
 
 export const Error = styled.span`

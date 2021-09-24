@@ -33,7 +33,7 @@ export default function SideNav() {
 
 const SideNavbar = styled.nav`
   width: 20vw;
-  height: 100%;
+  min-height: 100%;
   box-shadow: 4px 0px 10px 0px #70707033;
   padding: 2rem 1rem;
 `;
@@ -43,7 +43,7 @@ const List = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
   margin-top: 3rem;
   a {
     width: 100%;
@@ -60,9 +60,15 @@ const List = styled.ul`
     div {
       width: 30%;
       text-align: center;
+      img {
+        width: 30%;
+        object-fit: cover;
+        align-self: center;
+      }
     }
     p {
       width: 70%;
+      align-self: center;
     }
   }
 `;

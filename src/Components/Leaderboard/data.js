@@ -1,0 +1,38 @@
+export const data = [
+  {
+    stationID: "01",
+    workerName: "Rahul011",
+    activeMins: "45:54",
+    awayMins: "06:30",
+    idealMins: "10:30",
+    kiloPicksProduced: "200",
+    totalPoints: "50",
+  },
+  {
+    stationID: "01",
+    workerName: "Rahul011",
+    activeMins: "45:54",
+    awayMins: "06:30",
+    idealMins: "10:30",
+    kiloPicksProduced: "200",
+    totalPoints: "50",
+  },
+  {
+    stationID: "01",
+    workerName: "Rahul011",
+    activeMins: "45:54",
+    awayMins: "06:30",
+    idealMins: "10:30",
+    kiloPicksProduced: "200",
+    totalPoints: "50",
+  },
+  {
+    stationID: "01",
+    workerName: "Rahul011",
+    activeMins: "45:54",
+    awayMins: "06:30",
+    idealMins: "10:30",
+    kiloPicksProduced: "200",
+    totalPoints: "50",
+  },
+];
