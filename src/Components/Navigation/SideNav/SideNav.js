@@ -11,12 +11,15 @@ export default function SideNav() {
             <section>
                 <List>
                 {navItems.map((navLink,index) => {
+                    const url = window.location.pathname;
+                    const isActive = (url === navLink.link)
+                    const className = isActive ? 'activeNavLink' : null
                     return(
-                            <Link>
-                        <li>
-                            <div><img src={navLink.imageLight} alt="nav-icon"/></div>
-                            <SubHeadingText>{navLink.name}</SubHeadingText>
-                        </li>
+                        <Link to={navLink.link} key={`sidenav-${index}`}>
+                            <li className={className}>
+                                <div><img src={navLink.imageLight} alt="nav-icon"/></div>
+                                <SubHeadingText>{navLink.name}</SubHeadingText>
+                            </li>
                         </Link>
                     )
                 })}
@@ -50,6 +53,8 @@ const List = styled.ul`
         width:100%;
         height:2rem;        
         cursor:pointer;
+        align-items:center;
+        padding:1.5rem 0;
         div{
             width:30%;  
             text-align:center;          

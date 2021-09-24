@@ -9,6 +9,7 @@
     --grey-light: #848484;
     --green: #00AE31;
     --blue: #0075FF;
+    --blue-light: #D7ECFF;
 }
 
 * {
@@ -27,6 +28,11 @@ body {
 
 .App {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+}
+
+.activeNavLink {
+    background: var(--blue-light);
+    border-radius: 0.2rem;
 }

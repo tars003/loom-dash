@@ -17,7 +17,7 @@ import exportsDark from '../../../Assets/LeftNav-Images/Bold/Download.svg'
 export const navItems = [
     {
         name:"Dashboard",
-        link:"/dashboard",
+        link:"/",
         imageLight:dashboardLight,
         imageDark:dashboardDark
     },

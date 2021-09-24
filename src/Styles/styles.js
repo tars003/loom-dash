@@ -1,19 +1,21 @@
 import styled, { css } from "styled-components";
 
-
-
 export const HeadingText = styled.p`
   font-family: var(--primary-font);
   font-weight: 600;
   font-size: 1.5rem;
   text-align: center;
-  color: var(--black);  
+  color: var(--black);
 `;
 
 export const SubHeadingText = styled.p`
   font-family: var(--primary-font);
   font-weight: 500;
   font-size: 1.2rem;
+`;
+
+export const SectionRight = styled.section`
+  width: 80%;
 `;
 
 export const Error = styled.span`
@@ -49,12 +51,12 @@ export const Button = styled.button`
           color: #6321db;
           background: transparent;
         `}
-        @media only screen and (max-width: 768px) {
-          font-size: 12px;
-          width: 120px;
-          padding: 12px 0;
-          margin-right: 10px;
-        }
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+    width: 120px;
+    padding: 12px 0;
+    margin-right: 10px;
+  }
 `;
 
 export const Option = styled.option`
@@ -102,7 +104,7 @@ export const FormSection = styled.div`
   width: 70%;
   margin: 0 auto;
   padding-bottom: 150px;
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 768px) {
     padding-bottom: 60px;
   }
 `;
@@ -120,7 +122,7 @@ export const Label = styled.label`
   @media only screen and (max-width: 768px) {
     font-size: 14px;
     margin-top: 15px;
-    margin-bottom: 6px; 
+    margin-bottom: 6px;
   }
 `;
 
@@ -136,7 +138,7 @@ export const Input = styled.input`
   color: #848484;
   :focus {
     outline: none;
-  };
+  }
   @media only screen and (max-width: 768px) {
     width: 100%;
     font-size: 12px;
@@ -159,10 +161,9 @@ export const SubmitButton = styled.input`
   @media only screen and (max-width: 768px) {
     margin-top: 30px;
     font-size: 18px;
-    line-height:25px;
+    line-height: 25px;
     width: 250px;
-  height: 76px;
-
+    height: 76px;
   }
 `;
 
@@ -244,7 +245,6 @@ export const Name = styled.p`
     font-size: 20px;
     margin: 0;
   }
-
 `;
 
 export const Image = styled.img`
