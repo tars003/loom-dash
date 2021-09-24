@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LeftNavBar from "./Components/Navigation/SideNav/SideNav";
-import TopNavBar from "./Components/Navigation/TopNav/TopNav";
-import { SectionRight } from "./Styles/styles";
+import LeftNavBar from "../Navigation/SideNav/SideNav";
+import TopNavBar from "../Navigation/TopNav/TopNav";
+import { SectionRight } from "../../Styles/styles";
 
-export default function Error() {
+export default function Dashboard() {
   return (
     <>
       <LeftNavBar />
