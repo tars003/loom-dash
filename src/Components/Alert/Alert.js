@@ -1,6 +1,7 @@
 import React from "react";
 import LeftNavBar from "../Navigation/SideNav/SideNav";
 import TopNavBar from "../Navigation/TopNav/TopNav";
+import Table from "./Table";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -69,6 +70,7 @@ export default function Alert() {
             </div>
           </HeadingDiv>
         </MainSection>
+        <Table />
       </SectionRight>
     </>
   );
