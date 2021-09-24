@@ -39,19 +39,19 @@ body {
     border-radius: 0.2rem;
 }
 
-table {
-    padding: 5px;
-    border-spacing: 0 1rem !important;
-    border-collapse: separate !important;
-}
-
-td,
-th {
-    padding: 0.5rem !important;
-    border: 0;
-    font-weight: 500 !important;
-}
-
-th {
-    color: var(--grey) !important;
+.section-leaderboard {
+    table {
+        padding: 5px;
+        border-spacing: 0 1rem !important;
+        border-collapse: separate !important;
+    }
+    td,
+    th {
+        padding: 0.5rem !important;
+        border: 0;
+        font-weight: 500 !important;
+    }
+    th {
+        color: var(--grey) !important;
+    }
 }

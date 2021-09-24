@@ -22,6 +22,10 @@ export const MainSection = styled.section`
   padding: 2rem;
 `;
 
+export const Black = styled.span`
+  color: var(--black);
+  font-weight: 600;
+`;
 export const Green = styled.span`
   color: var(--green);
 `;

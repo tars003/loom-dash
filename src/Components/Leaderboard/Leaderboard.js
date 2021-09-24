@@ -26,7 +26,7 @@ export default function Leaderboard() {
   return (
     <>
       <LeftNavBar />
-      <SectionRight>
+      <SectionRight className="section-leaderboard">
         <TopNavBar />
         <MainSection>
           <HeadingText>Leaderboard</HeadingText>

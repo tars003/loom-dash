@@ -1,5 +1,5 @@
 import React from "react";
-import { HeadingText, SubHeadingText } from "../../../Styles/styles";
+import { HeadingText, SubHeadingText, Black } from "../../../Styles/styles";
 import { navItems } from "./data";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -18,9 +18,14 @@ export default function SideNav() {
               <Link to={navLink.link} key={`sidenav-${index}`}>
                 <li className={className}>
                   <div>
-                    <img src={navLink.imageLight} alt="nav-icon" />
+                    <img
+                      src={className ? navLink.imageDark : navLink.imageLight}
+                      alt="nav-icon"
+                    />
                   </div>
-                  <SubHeadingText>{navLink.name}</SubHeadingText>
+                  <SubHeadingText>
+                    {className ? <Black>{navLink.name}</Black> : navLink.name}
+                  </SubHeadingText>
                 </li>
               </Link>
             );
