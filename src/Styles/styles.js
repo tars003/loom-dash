@@ -15,7 +15,11 @@ export const SubHeadingText = styled.p`
 `;
 
 export const SectionRight = styled.section`
-  width: 80%;
+  width: 80vw;
+`;
+
+export const MainSection = styled.section`
+  padding: 2rem;
 `;
 
 export const Error = styled.span`
@@ -29,17 +33,17 @@ export const Star = styled.span`
 `;
 
 export const Button = styled.button`
-  min-width: 200px;
-  padding: 1rem 1.3em;
+  min-width: auto;
+  padding: 0.6rem;
   margin-right: ${(props) => props.right}px;
   margin-bottom: ${(props) => props.bottom}rem;
   margin-top: ${(props) => props.top}px;
-  border-radius: 15px;
+  border-radius: 0.4rem;
   border: none;
   font-family: var(--primary-font);
   font-weight: 500;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 1rem;
+  cursor: pointer;
   ${(props) =>
     props.primary
       ? css`
@@ -51,12 +55,6 @@ export const Button = styled.button`
           color: #6321db;
           background: transparent;
         `}
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-    width: 120px;
-    padding: 12px 0;
-    margin-right: 10px;
-  }
 `;
 
 export const Option = styled.option`

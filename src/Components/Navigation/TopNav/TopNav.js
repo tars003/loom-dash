@@ -9,7 +9,7 @@ export default function TopNav() {
       <List>
         <Link>
           <li>
-            <SubHeadingText>Setting</SubHeadingText>
+            <SubHeadingText>Settings</SubHeadingText>
           </li>
         </Link>
         <Link>

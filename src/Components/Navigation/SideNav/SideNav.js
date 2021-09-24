@@ -32,7 +32,7 @@ export default function SideNav() {
 }
 
 const SideNavbar = styled.nav`
-  width: 20%;
+  width: 20vw;
   height: 100%;
   box-shadow: 4px 0px 10px 0px #70707033;
   padding: 2rem 1rem;

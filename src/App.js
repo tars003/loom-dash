@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Leaderboard from "./Components/Leaderboard/Leaderboard";
 import Error from "./Error";
 
 export default function App() {
@@ -10,9 +11,6 @@ export default function App() {
             
           </Route>
           <Route path="/livestatus" exact>
-            
-          </Route>
-          <Route path="/leaderboard" exact>
             
           </Route>
           <Route path="/alerts" exact>
@@ -27,6 +25,9 @@ export default function App() {
           <Route path="/export" exact>
             
           </Route> */}
+        <Route path="/leaderboard" exact>
+          <Leaderboard />
+        </Route>
         <Route path="*" component={Error}></Route>
       </Switch>
     </div>
