@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Dashboard from "./Components/Dashboard/Dashboard";
 import Leaderboard from "./Components/Leaderboard/Leaderboard";
 import Alert from "./Components/Alert/Alert";
 import Error from "./Error";
@@ -26,6 +27,9 @@ export default function App() {
           <Route path="/export" exact>
             
           </Route> */}
+        <Route path="/" exact>
+          <Dashboard />
+        </Route>
         <Route path="/leaderboard" exact>
           <Leaderboard />
         </Route>

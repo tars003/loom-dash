@@ -52,12 +52,12 @@ export default function Alert() {
                   </Select>
                 </FormControl>
                 <FormControl fullWidth size="small">
-                  <InputLabel id="demo-simple-select-label">
+                  <InputLabel id="demo-simple-select-labels">
                     Select Alert
                   </InputLabel>
                   <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
+                    labelId="demo-simple-select-labels"
+                    id="demo-simple-selects"
                     value={age}
                     label="select alert"
                     onChange={handleChange}>
