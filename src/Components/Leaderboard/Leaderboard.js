@@ -30,12 +30,23 @@ export default function Leaderboard() {
     const data = {
       clientId: "KJNDKJ234",
     };
-    console.log(socket);
+    
     socket.on("running-shift-data", (data) => {
       console.log(data);
       setData(data);
-    });
+    },[socket]);
 
+    socket.on('dashboard-update', (data) => {
+      console.log(data);
+      setData(prevState => {
+        prevState.runningShift.employees.forEach(element => {
+          if(element.stationId === data.stationId) {
+            if(data.detected)element.activeTime += 10;
+            else element.awayTime += 10;
+          }
+        });
+      })
+    })
     // socket.emit('test-conn', "hello");
     // socket.emit('report-live-status', data);
     socket.emit("initial-connection-dashboard", data);

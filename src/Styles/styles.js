@@ -28,6 +28,7 @@ export const Black = styled.span`
 `;
 export const Green = styled.span`
   color: var(--green);
+  transition:all 0.5 ease-in-out;
 `;
 export const Blue = styled.span`
   color: var(--blue);
@@ -38,6 +39,7 @@ export const Red = styled.span`
 
 export const LightestGrey = styled.span`
   color: var(--grey-lightest);
+  transition:all 0.5 ease-in-out;
 `;
 
 export const Error = styled.span`
