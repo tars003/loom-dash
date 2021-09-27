@@ -39,12 +39,14 @@ export default function Leaderboard() {
     socket.on('dashboard-update', (data) => {
       console.log(data);
       setData(prevState => {
-        prevState.runningShift.employees.forEach(element => {
+        const temp = prevState;
+        temp.runningShift.employees.forEach(element => {
           if(element.stationId === data.stationId) {
             if(data.detected)element.activeTime += 10;
             else element.awayTime += 10;
           }
         });
+        return temp;
       })
     })
     // socket.emit('test-conn', "hello");
