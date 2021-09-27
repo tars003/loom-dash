@@ -1,5 +1,4 @@
 import React from "react";
-import { data } from "./data.js";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,7 +8,9 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Green, Blue, LightestGrey } from "../../Styles/styles";
 
-export default function TableComponent() {
+export default function TableComponent(props) {
+  const { data } = props;
+
   return (
     <TableContainer
       component={Paper}
@@ -32,7 +33,7 @@ export default function TableComponent() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((row) => (
+          {data.runningShift.employees.map((row) => (
             <TableRow
               key={row.stationID}
               sx={{
@@ -47,13 +48,13 @@ export default function TableComponent() {
               <TableCell>{row.stationID}</TableCell>
               <TableCell>{row.workerName}</TableCell>
               <TableCell>
-                <Green>{row.activeMins}m</Green>
+                <Green>{row.activeTime}m</Green>
               </TableCell>
               <TableCell>
-                <LightestGrey>{row.awayMins}m</LightestGrey>
+                <LightestGrey>{row.awayTime}m</LightestGrey>
               </TableCell>
               <TableCell>
-                <LightestGrey>{row.idealMins}m</LightestGrey>
+                <LightestGrey>{row.idealTime}m</LightestGrey>
               </TableCell>
               <TableCell>
                 <LightestGrey>{row.kiloPicksProduced}</LightestGrey>
