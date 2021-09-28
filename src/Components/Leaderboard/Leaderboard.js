@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import { Link } from "react-router-dom";
 import LeftNavBar from "../Navigation/SideNav/SideNav";
 import TopNavBar from "../Navigation/TopNav/TopNav";
@@ -9,7 +9,6 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
-import socket from "../../SocketConfig";
 import {
   SectionRight,
   MainSection,
@@ -20,39 +19,10 @@ import styled from "styled-components";
 
 export default function Leaderboard() {
   const [age, setAge] = React.useState("");
-  const [data, setData] = React.useState(null);
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-
-  useEffect(() => {
-    const data = {
-      clientId: "KJNDKJ234",
-    };
-    
-    socket.on("running-shift-data", (data) => {
-      console.log(data);
-      setData(data);
-    },[socket]);
-
-    socket.on('dashboard-update', (data) => {
-      console.log(data);
-      setData(prevState => {
-        const temp = prevState;
-        temp.runningShift.employees.forEach(element => {
-          if(element.stationId === data.stationId) {
-            if(data.detected)element.activeTime += 10;
-            else element.awayTime += 10;
-          }
-        });
-        return temp;
-      })
-    })
-    // socket.emit('test-conn', "hello");
-    // socket.emit('report-live-status', data);
-    socket.emit("initial-connection-dashboard", data);
-  }, []);
   return (
     <>
       <LeftNavBar />
@@ -95,11 +65,8 @@ export default function Leaderboard() {
               />
             </FormControl>
           </Box>
-          {data ? (
-            <Table data={data} />
-          ) : (
-            <HeadingText>No data Available</HeadingText>
-          )}
+
+          <Table />
         </MainSection>
       </SectionRight>
     </>
