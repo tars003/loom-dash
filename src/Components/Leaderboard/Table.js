@@ -34,22 +34,27 @@ export default function TableComponent() {
 
     socket.on("dashboard-update", (res) => {
       console.log(res);
-      setNewData(res);
-      setData((prevState) => {
-        const temp = prevState;
-        if (temp && newData) {
-          temp.runningShift.employees.forEach((element) => {
-            if (element["_id"] === newData.employeeId) {
-              console.log("element", element);
-              if (newData.detected) element.activeTime += 10;
-              else element.awayTime += 10;
-            }
-          });
-        }
-        console.log(temp, prevState);
-        return temp;
-      });
+      setData(res);
     });
+
+    // socket.on("dashboard-update", (res) => {
+    //   console.log(res);
+    //   setNewData(res);
+    //   setData((prevState) => {
+    //     const temp = prevState;
+    //     if (temp && newData) {
+    //       temp.runningShift.employees.forEach((element) => {
+    //         if (element["_id"] === newData.employeeId) {
+    //           console.log("element", element);
+    //           if (newData.detected) element.activeTime += 10;
+    //           else element.awayTime += 10;
+    //         }
+    //       });
+    //     }
+    //     console.log(temp, prevState);
+    //     return temp;
+    //   });
+    // });
   }, [newData]);
 
   return (
@@ -90,7 +95,7 @@ export default function TableComponent() {
                     marginTop: "0.5rem",
                   }}>
                   <TableCell>{row.stationId}</TableCell>
-                  <TableCell>{row.workerName}</TableCell>
+                  <TableCell>{row.name}</TableCell>
                   <TableCell>
                     <Green>
                       {moment.utc(row.activeTime * 1000).format("mm:ss")}m
